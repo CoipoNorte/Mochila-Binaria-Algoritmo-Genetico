@@ -1,0 +1,171 @@
+
+Generación 1:
+Mejor Valor en esta generación: 2059
+
+Generación 2:
+Mejor Valor en esta generación: 2086
+
+Generación 3:
+Mejor Valor en esta generación: 2050
+
+Generación 4:
+Mejor Valor en esta generación: 2184
+
+Generación 5:
+Mejor Valor en esta generación: 2296
+
+Generación 6:
+Mejor Valor en esta generación: 2276
+
+Generación 7:
+Mejor Valor en esta generación: 2159
+
+Generación 8:
+Mejor Valor en esta generación: 2146
+
+Generación 9:
+Mejor Valor en esta generación: 2382
+
+Generación 10:
+Mejor Valor en esta generación: 2106
+
+Generación 11:
+Mejor Valor en esta generación: 2008
+
+Generación 12:
+Mejor Valor en esta generación: 2017
+
+Generación 13:
+Mejor Valor en esta generación: 2130
+
+Generación 14:
+Mejor Valor en esta generación: 1951
+
+Generación 15:
+Mejor Valor en esta generación: 2095
+
+Generación 16:
+Mejor Valor en esta generación: 1933
+
+Generación 17:
+Mejor Valor en esta generación: 2114
+
+Generación 18:
+Mejor Valor en esta generación: 2199
+
+Generación 19:
+Mejor Valor en esta generación: 2138
+
+Generación 20:
+Mejor Valor en esta generación: 2164
+
+Generación 21:
+Mejor Valor en esta generación: 1972
+
+Generación 22:
+Mejor Valor en esta generación: 2105
+
+Generación 23:
+Mejor Valor en esta generación: 2085
+
+Generación 24:
+Mejor Valor en esta generación: 1998
+
+Generación 25:
+Mejor Valor en esta generación: 2118
+
+Generación 26:
+Mejor Valor en esta generación: 2024
+
+Generación 27:
+Mejor Valor en esta generación: 2092
+
+Generación 28:
+Mejor Valor en esta generación: 2012
+
+Generación 29:
+Mejor Valor en esta generación: 2175
+
+Generación 30:
+Mejor Valor en esta generación: 2126
+
+Generación 31:
+Mejor Valor en esta generación: 2005
+
+Generación 32:
+Mejor Valor en esta generación: 2062
+
+Generación 33:
+Mejor Valor en esta generación: 2049
+
+Generación 34:
+Mejor Valor en esta generación: 2084
+
+Generación 35:
+Mejor Valor en esta generación: 2128
+
+Generación 36:
+Mejor Valor en esta generación: 2211
+
+Generación 37:
+Mejor Valor en esta generación: 2050
+
+Generación 38:
+Mejor Valor en esta generación: 2143
+
+Generación 39:
+Mejor Valor en esta generación: 2227
+
+Generación 40:
+Mejor Valor en esta generación: 2151
+
+Generación 41:
+Mejor Valor en esta generación: 2047
+
+Generación 42:
+Mejor Valor en esta generación: 1994
+
+Generación 43:
+Mejor Valor en esta generación: 2124
+
+Generación 44:
+Mejor Valor en esta generación: 2065
+
+Generación 45:
+Mejor Valor en esta generación: 2049
+
+Generación 46:
+Mejor Valor en esta generación: 2096
+
+Generación 47:
+Mejor Valor en esta generación: 2081
+
+Generación 48:
+Mejor Valor en esta generación: 2238
+
+Generación 49:
+Mejor Valor en esta generación: 2091
+
+Generación 50:
+Mejor Valor en esta generación: 2174
+
+Mejor Solución:
+Configuración del Cromosoma: [0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0]
+Objetos seleccionados:
+ - Objeto 4: Valor = 148, Peso = 7
+ - Objeto 8: Valor = 165, Peso = 14
+ - Objeto 10: Valor = 182, Peso = 9
+ - Objeto 11: Valor = 171, Peso = 25
+ - Objeto 15: Valor = 187, Peso = 12
+ - Objeto 16: Valor = 175, Peso = 13
+ - Objeto 17: Valor = 75, Peso = 8
+ - Objeto 18: Valor = 127, Peso = 25
+ - Objeto 20: Valor = 190, Peso = 23
+ - Objeto 21: Valor = 168, Peso = 10
+ - Objeto 23: Valor = 188, Peso = 15
+ - Objeto 35: Valor = 100, Peso = 5
+ - Objeto 46: Valor = 112, Peso = 27
+ - Objeto 47: Valor = 139, Peso = 10
+Valor Total: 2127
+Peso Total: 203
+Capacidad Máxima de la Mochila: 200

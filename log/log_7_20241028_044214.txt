@@ -1,0 +1,332 @@
+
+Generación 1:
+Mejor Valor en esta generación: 2045
+
+Generación 2:
+Mejor Valor en esta generación: 1872
+
+Generación 3:
+Mejor Valor en esta generación: 2046
+
+Generación 4:
+Mejor Valor en esta generación: 1996
+
+Generación 5:
+Mejor Valor en esta generación: 2022
+
+Generación 6:
+Mejor Valor en esta generación: 2023
+
+Generación 7:
+Mejor Valor en esta generación: 2158
+
+Generación 8:
+Mejor Valor en esta generación: 2129
+
+Generación 9:
+Mejor Valor en esta generación: 2012
+
+Generación 10:
+Mejor Valor en esta generación: 1950
+
+Generación 11:
+Mejor Valor en esta generación: 2192
+
+Generación 12:
+Mejor Valor en esta generación: 2083
+
+Generación 13:
+Mejor Valor en esta generación: 2229
+
+Generación 14:
+Mejor Valor en esta generación: 2252
+
+Generación 15:
+Mejor Valor en esta generación: 2005
+
+Generación 16:
+Mejor Valor en esta generación: 2089
+
+Generación 17:
+Mejor Valor en esta generación: 2085
+
+Generación 18:
+Mejor Valor en esta generación: 2099
+
+Generación 19:
+Mejor Valor en esta generación: 2194
+
+Generación 20:
+Mejor Valor en esta generación: 2112
+
+Generación 21:
+Mejor Valor en esta generación: 2127
+
+Generación 22:
+Mejor Valor en esta generación: 2275
+
+Generación 23:
+Mejor Valor en esta generación: 2257
+
+Generación 24:
+Mejor Valor en esta generación: 2170
+
+Generación 25:
+Mejor Valor en esta generación: 2108
+
+Generación 26:
+Mejor Valor en esta generación: 2131
+
+Generación 27:
+Mejor Valor en esta generación: 2325
+
+Generación 28:
+Mejor Valor en esta generación: 2191
+
+Generación 29:
+Mejor Valor en esta generación: 2122
+
+Generación 30:
+Mejor Valor en esta generación: 2210
+
+Generación 31:
+Mejor Valor en esta generación: 2048
+
+Generación 32:
+Mejor Valor en esta generación: 2104
+
+Generación 33:
+Mejor Valor en esta generación: 2259
+
+Generación 34:
+Mejor Valor en esta generación: 2193
+
+Generación 35:
+Mejor Valor en esta generación: 2137
+
+Generación 36:
+Mejor Valor en esta generación: 2128
+
+Generación 37:
+Mejor Valor en esta generación: 2297
+
+Generación 38:
+Mejor Valor en esta generación: 2165
+
+Generación 39:
+Mejor Valor en esta generación: 2154
+
+Generación 40:
+Mejor Valor en esta generación: 2022
+
+Generación 41:
+Mejor Valor en esta generación: 2015
+
+Generación 42:
+Mejor Valor en esta generación: 2261
+
+Generación 43:
+Mejor Valor en esta generación: 2367
+
+Generación 44:
+Mejor Valor en esta generación: 2064
+
+Generación 45:
+Mejor Valor en esta generación: 1984
+
+Generación 46:
+Mejor Valor en esta generación: 2118
+
+Generación 47:
+Mejor Valor en esta generación: 2089
+
+Generación 48:
+Mejor Valor en esta generación: 2070
+
+Generación 49:
+Mejor Valor en esta generación: 2097
+
+Generación 50:
+Mejor Valor en esta generación: 2053
+
+Generación 51:
+Mejor Valor en esta generación: 1957
+
+Generación 52:
+Mejor Valor en esta generación: 2083
+
+Generación 53:
+Mejor Valor en esta generación: 2179
+
+Generación 54:
+Mejor Valor en esta generación: 2125
+
+Generación 55:
+Mejor Valor en esta generación: 2281
+
+Generación 56:
+Mejor Valor en esta generación: 2146
+
+Generación 57:
+Mejor Valor en esta generación: 2165
+
+Generación 58:
+Mejor Valor en esta generación: 2180
+
+Generación 59:
+Mejor Valor en esta generación: 2171
+
+Generación 60:
+Mejor Valor en esta generación: 2138
+
+Generación 61:
+Mejor Valor en esta generación: 2061
+
+Generación 62:
+Mejor Valor en esta generación: 2062
+
+Generación 63:
+Mejor Valor en esta generación: 2139
+
+Generación 64:
+Mejor Valor en esta generación: 2177
+
+Generación 65:
+Mejor Valor en esta generación: 2051
+
+Generación 66:
+Mejor Valor en esta generación: 2099
+
+Generación 67:
+Mejor Valor en esta generación: 2274
+
+Generación 68:
+Mejor Valor en esta generación: 2218
+
+Generación 69:
+Mejor Valor en esta generación: 2246
+
+Generación 70:
+Mejor Valor en esta generación: 2235
+
+Generación 71:
+Mejor Valor en esta generación: 2291
+
+Generación 72:
+Mejor Valor en esta generación: 2260
+
+Generación 73:
+Mejor Valor en esta generación: 2090
+
+Generación 74:
+Mejor Valor en esta generación: 2063
+
+Generación 75:
+Mejor Valor en esta generación: 2109
+
+Generación 76:
+Mejor Valor en esta generación: 2151
+
+Generación 77:
+Mejor Valor en esta generación: 2211
+
+Generación 78:
+Mejor Valor en esta generación: 2054
+
+Generación 79:
+Mejor Valor en esta generación: 2181
+
+Generación 80:
+Mejor Valor en esta generación: 2109
+
+Generación 81:
+Mejor Valor en esta generación: 2149
+
+Generación 82:
+Mejor Valor en esta generación: 2052
+
+Generación 83:
+Mejor Valor en esta generación: 2122
+
+Generación 84:
+Mejor Valor en esta generación: 1977
+
+Generación 85:
+Mejor Valor en esta generación: 1991
+
+Generación 86:
+Mejor Valor en esta generación: 1963
+
+Generación 87:
+Mejor Valor en esta generación: 1996
+
+Generación 88:
+Mejor Valor en esta generación: 2094
+
+Generación 89:
+Mejor Valor en esta generación: 1946
+
+Generación 90:
+Mejor Valor en esta generación: 1944
+
+Generación 91:
+Mejor Valor en esta generación: 1918
+
+Generación 92:
+Mejor Valor en esta generación: 1855
+
+Generación 93:
+Mejor Valor en esta generación: 1895
+
+Generación 94:
+Mejor Valor en esta generación: 1890
+
+Generación 95:
+Mejor Valor en esta generación: 2063
+
+Generación 96:
+Mejor Valor en esta generación: 2152
+
+Generación 97:
+Mejor Valor en esta generación: 2098
+
+Generación 98:
+Mejor Valor en esta generación: 2027
+
+Generación 99:
+Mejor Valor en esta generación: 2125
+
+Generación 100:
+Mejor Valor en esta generación: 2177
+
+Top 5 Mejores Soluciones:
+1. Valor: 2367, Peso: 214, Configuración: [1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+2. Valor: 2367, Peso: 214, Configuración: [1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+3. Valor: 2367, Peso: 214, Configuración: [1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+4. Valor: 2325, Peso: 200, Configuración: [0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+5. Valor: 2297, Peso: 200, Configuración: [0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0]
+
+
+Mejor Solución:
+Configuración del Cromosoma: [1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+Objetos seleccionados:
+ - Objeto 1: Valor = 80, Peso = 10
+ - Objeto 7: Valor = 192, Peso = 18
+ - Objeto 8: Valor = 165, Peso = 14
+ - Objeto 10: Valor = 182, Peso = 9
+ - Objeto 13: Valor = 85, Peso = 17
+ - Objeto 14: Valor = 142, Peso = 5
+ - Objeto 15: Valor = 187, Peso = 12
+ - Objeto 16: Valor = 175, Peso = 13
+ - Objeto 17: Valor = 75, Peso = 8
+ - Objeto 23: Valor = 188, Peso = 15
+ - Objeto 29: Valor = 171, Peso = 25
+ - Objeto 31: Valor = 90, Peso = 13
+ - Objeto 33: Valor = 73, Peso = 5
+ - Objeto 35: Valor = 100, Peso = 5
+ - Objeto 36: Valor = 132, Peso = 7
+ - Objeto 37: Valor = 159, Peso = 26
+ - Objeto 43: Valor = 162, Peso = 12
+Valor Total: 2358
+Peso Total: 214
+Capacidad Máxima de la Mochila: 200
