@@ -9,7 +9,7 @@ def leer_datos_csv(nombre_archivo):
     with open(nombre_archivo, newline='') as csvfile:
         lector = csv.reader(csvfile)
         for fila in lector:
-            peso, valor = map(int, fila)  # Nota: Se asume el formato Peso, Valor
+            valor, peso = map(int, fila)
             valores.append(valor)
             pesos.append(peso)
     return valores, pesos
@@ -25,11 +25,7 @@ def mostrar_datos(valores, pesos):
 def calcular_fitness(solucion, valores, pesos, capacidad_maxima):
     peso_total = sum(peso * seleccion for peso, seleccion in zip(pesos, solucion))
     valor_total = sum(valor * seleccion for valor, seleccion in zip(valores, solucion))
-    return valor_total if peso_total <= capacidad_maxima else 0
-
-# Crear una solución inicial aleatoria
-def crear_solucion_aleatoria(num_objetos):
-    return [random.randint(0, 1) for _ in range(num_objetos)]
+    return valor_total if peso_total <= capacidad_maxima else 0  # Puntaje 0 si excede la capacidad
 
 # Crear una solución inicial casi vacía
 def crear_solucion_casi_vacia(num_objetos, porcentaje_inicial=0.1):
@@ -40,55 +36,33 @@ def crear_solucion_casi_vacia(num_objetos, porcentaje_inicial=0.1):
         solucion[idx] = 1
     return solucion
 
-# Crear una solución inicial con solo 1 objeto seleccionado
-def crear_solucion_un_objeto(num_objetos):
-    solucion = [0] * num_objetos
-    idx = random.randint(0, num_objetos - 1)
-    solucion[idx] = 1
-    return solucion
+# Crear una población inicial con mochilas casi vacías
+def crear_poblacion(num_objetos, tamaño_poblacion, porcentaje_inicial=0.1):
+    return [crear_solucion_casi_vacia(num_objetos, porcentaje_inicial) for _ in range(tamaño_poblacion)]
 
-# Crear una solución inicial vacía
-def crear_solucion_vacia(num_objetos):
-    return [0] * num_objetos
+# Selección de padres basada en el fitness
+def seleccion(poblacion, valores, pesos, capacidad_maxima):
+    puntuaciones = [(solucion, calcular_fitness(solucion, valores, pesos, capacidad_maxima)) for solucion in poblacion]
+    puntuaciones.sort(key=lambda x: x[1], reverse=True)
+    return [solucion for solucion, puntaje in puntuaciones[:len(puntuaciones) // 2]]
 
-# Crear una población inicial según la elección del usuario
-def crear_poblacion(num_objetos, tamaño_poblacion, inicializacion):
-    if inicializacion == "aleatoria":
-        return [crear_solucion_aleatoria(num_objetos) for _ in range(tamaño_poblacion)]
-    elif inicializacion == "casi_vacia":
-        return [crear_solucion_casi_vacia(num_objetos) for _ in range(tamaño_poblacion)]
-    elif inicializacion == "un_objeto":
-        return [crear_solucion_un_objeto(num_objetos) for _ in range(tamaño_poblacion)]
-    elif inicializacion == "vacia":
-        return [crear_solucion_vacia(num_objetos) for _ in range(tamaño_poblacion)]
-
-# Selección de padres mejorada usando torneo
-def seleccion(poblacion, valores, pesos, capacidad_maxima, k=3):
-    padres = []
-    for _ in range(len(poblacion) // 2):
-        torneo = random.sample(poblacion, k)
-        torneo.sort(key=lambda ind: calcular_fitness(ind, valores, pesos, capacidad_maxima), reverse=True)
-        padres.append(torneo[0])
-    return padres
-
-# Cruce entre dos soluciones mejorado con cruce uniforme
+# Cruce entre dos soluciones
 def crossover(parent1, parent2):
-    hijo = []
-    for i in range(len(parent1)):
-        if random.random() < 0.5:
-            hijo.append(parent1[i])
-        else:
-            hijo.append(parent2[i])
+    punto_cruce = random.randint(1, len(parent1) - 1)
+    hijo = parent1[:punto_cruce] + parent2[punto_cruce:]
     return hijo
 
-# Mutación mejorada
+# Mutación de una solución
 def mutacion(solucion, tasa_mutacion):
-    return [1 - bit if random.random() < tasa_mutacion else bit for bit in solucion]
+    for i in range(len(solucion)):
+        if random.random() < tasa_mutacion:
+            solucion[i] = 1 - solucion[i]  # Cambia de 1 a 0 o de 0 a 1
+    return solucion
 
 # Algoritmo Genético para resolver el problema de la mochila
-def algoritmo_genetico(valores, pesos, capacidad_maxima, tamaño_poblacion, tasa_cruce, tasa_mutacion, generaciones, inicializacion):
+def algoritmo_genetico(valores, pesos, capacidad_maxima, tamaño_poblacion, tasa_cruce, tasa_mutacion, generaciones):
     num_objetos = len(valores)
-    poblacion = crear_poblacion(num_objetos, tamaño_poblacion, inicializacion)
+    poblacion = crear_poblacion(num_objetos, tamaño_poblacion, porcentaje_inicial=0.1)  # Inicia con mochilas casi vacías
     mejor_solucion = None
     mejor_valor = 0
 
@@ -114,8 +88,8 @@ def algoritmo_genetico(valores, pesos, capacidad_maxima, tamaño_poblacion, tasa
                 mejor_valor = valor_total
                 mejor_solucion = solucion
 
-        # Mostrar progreso cada 50 generaciones
-        if gen % 50 == 0 or gen == generaciones - 1:
+        # Mostrar progreso cada 100 generaciones
+        if gen % 100 == 0 or gen == generaciones - 1:
             print(f"Generación {gen+1}, Mejor Valor: {mejor_valor}")
 
     return mejor_solucion, mejor_valor
@@ -135,28 +109,9 @@ def main():
     tasa_cruce = float(input("Tasa de cruce (0.0 - 1.0, ej. 0.8): "))
     tasa_mutacion = float(input("Tasa de mutación (0.0 - 1.0, ej. 0.05): "))
     generaciones = int(input("Número de generaciones: "))
-    
-    print("\nOpciones de inicialización:")
-    print("1. Aleatoria")
-    print("2. Casi Vacía")
-    print("3. Solo 1 Objeto")
-    print("4. Vacía")
-    opcion = input("Selecciona el tipo de inicialización (1-4): ").strip()
-    
-    if opcion == '1':
-        inicializacion = "aleatoria"
-    elif opcion == '2':
-        inicializacion = "casi_vacia"
-    elif opcion == '3':
-        inicializacion = "un_objeto"
-    elif opcion == '4':
-        inicializacion = "vacia"
-    else:
-        print("Opción inválida. Usando inicialización aleatoria por defecto.")
-        inicializacion = "aleatoria"
 
     # Ejecutar el algoritmo genético
-    mejor_solucion, mejor_valor = algoritmo_genetico(valores, pesos, capacidad_maxima, tamaño_poblacion, tasa_cruce, tasa_mutacion, generaciones, inicializacion)
+    mejor_solucion, mejor_valor = algoritmo_genetico(valores, pesos, capacidad_maxima, tamaño_poblacion, tasa_cruce, tasa_mutacion, generaciones)
 
     # Verificar si se encontró una solución válida
     if mejor_solucion is None or mejor_valor == 0:
