@@ -1,120 +1,96 @@
 # Algoritmo Genético - Problema de la Mochila Binaria
 
-## Descripción
+Este proyecto utiliza un **Algoritmo Genético** (AG) para resolver el problema de la **mochila binaria**. El objetivo es seleccionar una combinación de objetos, cada uno con un valor y un peso determinado, de manera que el valor total se maximice sin exceder la capacidad de la mochila.
 
-Este proyecto implementa un **algoritmo genético** para resolver el problema de la mochila binaria. El objetivo es maximizar el valor total de los objetos seleccionados dentro de una mochila, sin exceder una capacidad máxima de peso. Los **algoritmos genéticos** son técnicas de optimización basadas en el principio de la selección natural y son particularmente efectivos para resolver problemas complejos donde no existe una solución directa.
+## Descripción del Problema
 
-## ¿Qué es un Algoritmo Genético?
+Dado un conjunto de objetos con valores y pesos, y una capacidad máxima que la mochila puede cargar, el objetivo es determinar qué objetos incluir en la mochila para **maximizar el valor total** sin superar la capacidad permitida. La selección óptima se realiza mediante Algoritmos Genéticos, que son métodos de optimización basados en los principios de la evolución natural. Igual que en un robo no???
 
-Un **algoritmo genético (AG)** es un método inspirado en la evolución natural. Funciona mediante la generación y evolución de una población de posibles soluciones a un problema, seleccionando y combinando las mejores soluciones para crear nuevas generaciones. Los pasos principales en un algoritmo genético son:
+## Algoritmo Genético para Resolver el Problema
 
-1. **Inicialización**: Se crea una población inicial de posibles soluciones (cromosomas).
-2. **Evaluación (Fitness)**: Se calcula el "fitness" de cada cromosoma, que indica qué tan buena es esa solución.
-3. **Selección**: Se eligen los cromosomas más fuertes (con mejor fitness) para crear la próxima generación.
-4. **Cruce (Crossover)**: Se combinan pares de cromosomas seleccionados para crear nuevos cromosomas (hijos).
-5. **Mutación**: Se realizan pequeñas modificaciones aleatorias en los cromosomas para mantener la diversidad genética.
-6. **Repetición**: Se repiten los pasos 2-5 hasta que se alcance el número de generaciones deseado.
+El Algoritmo Genético sigue estos pasos para encontrar la combinación óptima: ñ.n
 
-## Estructura del Proyecto
+### 1. Inicialización de la Población
 
-- **`codigo.py`**: Script principal que ejecuta el algoritmo genético. Configura los parámetros, maneja la lógica del algoritmo y muestra los resultados finales.
-- **`objetos.csv`**: Archivo CSV con la lista de objetos. Cada fila representa un objeto con dos columnas: `valor` y `peso`.
-- **`log/`**: Carpeta donde se guardan los archivos de registro (`log`) de cada ejecución del algoritmo. Cada archivo incluye detalles sobre las soluciones encontradas.
+El AG comienza generando una **población de soluciones aleatorias**, cada una representada como un **cromosoma**. En este problema, un cromosoma es una secuencia binaria (por ejemplo, `[1, 0, 1, 1, 0]`), donde cada posición representa un objeto:
+- `1` indica que el objeto está incluido en la mochila.
+- `0` indica que el objeto no está incluido.
 
-## Ejecución del Proyecto
+Cada cromosoma en la población representa una posible solución al problema.
 
-### 1. Preparar el Archivo de Objetos
+### 2. Evaluación (Función de Fitness)
 
-Asegúrate de tener un archivo llamado `objetos.csv` en el mismo directorio que `main.py`, con el siguiente formato:
+Cada cromosoma se evalúa para calcular su **fitness**:
+- La **función de fitness** calcula el valor total de los objetos seleccionados en el cromosoma.
+- Si el peso total de los objetos seleccionados excede la capacidad máxima de la mochila, el fitness se establece en `0`, penalizando así soluciones no válidas.
 
-```csv
-valor,peso
-60,10
-100,20
-120,30
-...
-```
+### 3. Selección de Padres
 
-### 2. Ejecutar el Script
+Para crear la próxima generación de soluciones, el AG selecciona los cromosomas más aptos (aquellos con mayor fitness) de la población actual:
+- Los mejores cromosomas se eligen como **padres** para reproducirse y crear nuevos cromosomas.
+- Este proceso simula la selección natural, en la que solo las soluciones más viables tienen oportunidad de pasar sus genes a la siguiente generación.
 
-Abre la consola y ejecuta el siguiente comando:
+### 4. Cruce (Crossover)
 
-```bash
-py codigo.py
-```
+El **cruce** combina pares de padres para generar nuevos cromosomas (hijos):
+- Se selecciona un punto de cruce aleatorio en el cromosoma.
+- Se combina la primera parte de un padre con la segunda parte del otro para crear un hijo.
+- Esto permite que las soluciones evolucionen al explorar nuevas combinaciones de objetos.
 
-### 3. Configurar los Parámetros
+### 5. Mutación
 
-Al iniciar el script, se te pedirá que ingreses varios parámetros. Puedes presionar "Enter" para usar los valores predeterminados o ingresar tus propios valores:
+Para introducir variabilidad y evitar el estancamiento en soluciones locales, se aplica **mutación** a algunos cromosomas:
+- Con una baja probabilidad, se muta una posición del cromosoma, cambiando un `1` a `0` o viceversa.
+- La mutación es crucial para explorar configuraciones de objetos que podrían no ser posibles solo con el cruce.
 
-- **Capacidad máxima de la mochila (Entero)**: Capacidad máxima de peso que puede llevar la mochila.
-- **Tamaño de la población (Entero entre 1 - 100)**: Número de soluciones (cromosomas) en cada generación.
-- **Tasa de cruce (Decimal entre 0.0 - 1.0)**: Probabilidad de que se realice el cruce entre dos cromosomas.
-- **Tasa de mutación (Decimal entre 0.0 - 1.0)**: Probabilidad de que ocurra una mutación en los cromosomas.
-- **Número de generaciones (Entero)**: Número de veces que el algoritmo evolucionará la población.
+### 6. Evolución a través de Generaciones
 
-### 4. Resultados
+El proceso de evaluación, selección, cruce y mutación se repite durante varias generaciones:
+- Con cada generación, la población se vuelve más apta y converge hacia soluciones con un mayor valor total, respetando la capacidad de la mochila.
 
-El script mostrará el progreso de las generaciones y, al final, presentará:
+### Resultados
 
-- **La mejor solución encontrada**: Incluyendo los objetos seleccionados, su valor total y peso total.
-- **Un Top 5 de las mejores soluciones válidas**: Mostrando las configuraciones, valores y pesos.
-
-Además, se generará un archivo de registro en la carpeta `log/`, con todos los detalles de la ejecución para futuras referencias.
-
-## Ejemplo de Salida
+En este ejemplo, después de 200 generaciones, el algoritmo encontró la siguiente mejor solución:
 
 ```plaintext
-Algoritmo Genético - Problema de la Mochila
-Capacidad máxima de la mochila (Entero) [100]: 
-Tamaño de la población (Entero entre 1 - 100) [100]: 50
-Tasa de cruce (Decimal entre 0.0 - 1.0) [0.8]: 
-Tasa de mutación (Decimal entre 0.0 - 1.0) [0.05]: 
-Número de generaciones (Entero) [100]: 50
-
-Generación 1:
-Mejor Valor en esta generación: 750
-
-...
+Generación 1, Mejor Valor: 220
+Generación 101, Mejor Valor: 249
+Generación 200, Mejor Valor: 249
 
 Mejor Solución:
-Configuración del Cromosoma: [1, 0, 1, ...]
+Configuración del Cromosoma: [1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 
+0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1]
 Objetos seleccionados:
- - Objeto 1: Valor = 60, Peso = 10
- - Objeto 3: Valor = 120, Peso = 30
-Valor Total: 180
-Peso Total: 40
-Capacidad Máxima de la Mochila: 100
-
-Top 5 Mejores Soluciones:
-1. Valor: 180, Peso: 40, Configuración: [1, 0, 1, ...]
-2. Valor: 175, Peso: 39, Configuración: [1, 0, 1, ...]
-3. ...
+ - Objeto 1: Valor = 10, Peso = 2
+ - Objeto 2: Valor = 8, Peso = 1
+ - Objeto 4: Valor = 5, Peso = 1
+ - Objeto 5: Valor = 12, Peso = 3
+ - Objeto 7: Valor = 7, Peso = 1
+ - Objeto 12: Valor = 10, Peso = 2
+ - Objeto 13: Valor = 8, Peso = 1
+ - Objeto 14: Valor = 15, Peso = 4
+ - Objeto 15: Valor = 5, Peso = 1
+ - Objeto 18: Valor = 7, Peso = 1
+ - Objeto 19: Valor = 11, Peso = 3
+ - Objeto 23: Valor = 10, Peso = 2
+ - Objeto 24: Valor = 8, Peso = 1
+ - Objeto 25: Valor = 15, Peso = 4
+ - Objeto 26: Valor = 5, Peso = 1
+ - Objeto 27: Valor = 12, Peso = 3
+ - Objeto 28: Valor = 9, Peso = 2
+ - Objeto 29: Valor = 7, Peso = 1
+ - Objeto 34: Valor = 10, Peso = 2
+ - Objeto 35: Valor = 8, Peso = 1
+ - Objeto 37: Valor = 5, Peso = 1
+ - Objeto 39: Valor = 9, Peso = 2
+ - Objeto 40: Valor = 7, Peso = 1
+ - Objeto 44: Valor = 14, Peso = 3
+ - Objeto 45: Valor = 10, Peso = 2
+ - Objeto 46: Valor = 8, Peso = 1
+ - Objeto 48: Valor = 5, Peso = 1
+ - Objeto 50: Valor = 9, Peso = 2
+Valor Total: 249
+Peso Total: 50
+Capacidad Máxima de la Mochila: 50
 ```
-
-## Principales Parámetros del Algoritmo
-
-1. **Capacidad máxima**: Define el límite de peso que puede llevar la mochila. Las soluciones que exceden este límite no son válidas.
-2. **Tamaño de la población**: Controla cuántos posibles cromosomas se consideran en cada generación. Un tamaño mayor puede dar mejores resultados, pero aumentará el tiempo de cálculo.
-3. **Tasa de cruce**: Define qué tan frecuentemente se mezclan dos cromosomas para crear nuevos. Una tasa de cruce más alta aumenta la exploración de nuevas soluciones.
-4. **Tasa de mutación**: Introduce variaciones aleatorias en los cromosomas para mantener la diversidad genética. Evita que el algoritmo se estanque en una solución local.
-
-## Archivos de Log
-
-Cada ejecución del algoritmo genera un archivo de log en la carpeta `log/` con un nombre en el formato `log_numero_fecha_hora.txt`. Estos archivos contienen:
-
-- Parámetros de configuración usados.
-- Progreso de cada generación.
-- Resultados finales, incluida la mejor solución y el top 5 de mejores soluciones válidas.
-
-## **Notas para Presentación en Clase:**
-- **Cromosomas y genes**: Los cromosomas representan soluciones, y los genes (bits) indican la inclusión o exclusión de un objeto.
-- **La selección natural**: El proceso de selección ayuda a mejorar las soluciones a través de generaciones.
-
-## Ejemplo de Valores
-
-- Capacidad máxima de la mochila (Entero): **200**
-- Tamaño de la población (Entero entre 1 - 100): **100**
-- Tasa de cruce (Decimal entre 0.0 - 1.0): **0.8**
-- Tasa de mutación (Decimal entre 0.0 - 1.0): **0.05**
-- Número de generaciones (Entero): **100**
+En este resultado, el valor total de los objetos seleccionados es 249, utilizando exactamente la capacidad máxima de la mochila (50). Esto muestra la capacidad del Algoritmo Genético para optimizar combinaciones de objetos, maximizando el valor mientras se respeta la restricción de capacidad.
